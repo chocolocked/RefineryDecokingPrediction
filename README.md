@@ -35,7 +35,10 @@ Generic:
 * We are utilizing two approaches: Long short term memory(LSTM) and Gradient boosting (GBM) for the prediction.
 * The raw data: time stamped data of lots of variables stored in XOP, ndP, VPR, Flow, Temperature, Decoke, FireboxandDMDS, Analyzers, Severity sheets in the excel file
 
- ![refineryrawdata](C:/Users/Ginny.Zhu/OneDrive - Shell/AArefinary/Pics/refineryrawdata.png)
+div align="center">
+    <img src="C:/Users/Ginny.Zhu/OneDrive - Shell/AArefinary/Pics/refineryrawdata.png)" width="400px"</img> 
+</div>
+
 
 
 
