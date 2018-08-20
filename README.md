@@ -34,6 +34,7 @@ Generic:
 * The idea, simply, is to predict VPR(venturi pressure) for 20 passes of the furnaces. If any of them is over 0.95, then it indicates decoking needs. 
 * We are utilizing two approaches: Long short term memory(LSTM) and Gradient boosting (GBM) for the prediction.
 * The raw data: time stamped data of lots of variables stored in XOP, ndP, VPR, Flow, Temperature, Decoke, FireboxandDMDS, Analyzers, Severity sheets in the excel file
+
  ![refineryrawdata](C:/Users/Ginny.Zhu/OneDrive - Shell/AArefinary/Pics/refineryrawdata.png)
 
 
