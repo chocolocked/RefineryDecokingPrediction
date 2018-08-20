@@ -1,5 +1,6 @@
 # Refinery Decoking Prediction
 
+
 The initial attempts at predicting decoking periods of refinery furnaces based on data (2017-11 to 2018-07) from process engineers.
 The goal is to help engineers take active control of possible imminent decoking and therefore help reduce the costs due to shut-down of the furnaces.
 
@@ -30,7 +31,6 @@ Generic:
 
 
 ## How it works
-
 * The idea, simply, is to predict VPR(venturi pressure) for 20 passes of the furnaces. If any of them is over 0.95, then it indicates decoking needs. 
 * We are utilizing two approaches: Long short term memory(LSTM) and Gradient boosting (GBM) for the prediction.
 * The raw data: time stamped data of lots of variables stored in XOP, ndP, VPR, Flow, Temperature, Decoke, FireboxandDMDS, Analyzers, Severity sheets in the excel file
@@ -40,35 +40,16 @@ Generic:
  2. EDA: distribution plots for un-rolling and rolling, correlation check
  3. Model: convert time series to supervised learning, data scaling, split data, train and validate, evaluate with loss and RMSE, and plot the predicted vs true for each pass 
  4. Tuning: define the key metrics to optimize, send to SigOpt API and bayesian optimized the hyperparameters, fetch the results, and feedback to the Model and repeat 3
+* For GBM: 
+ 1. Borrow the data processed by LSTM in 1.
+ 2. Data transformation into supervised learning, split data, and random search and cross-validate hyperparamters for GBM for 'n_estimators',  'max_depth', 'min_samples_split', 'learning_rate', 'max_features','loss'
+ 3. For each pass, load the random search result,  plot feature importance, plot parital dependence (for top 10), plot predicted vs true for test and all history 
 
 
-
-
-slight changes in terms of output locations after re-organization 
-But naming should be self-evident to find out, so please double check.
-
-this step does this 
-
-that step does that
-
-with outputs like these 
-
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Organization of the files 
-
-Explain how to run the automated tests for this system
+## File Organizations
+* DecokingPrediction: Main folder with LSTM and GBM in 2 subfolders
+ ** subfolders contain:
+ ***
 
 ## To-dos
 
@@ -80,8 +61,7 @@ Give an example
 
 
 ## Authors
-
-* **Ginny Zhu** - *Initial work* - [githubprofile](https://github.com/chocolocked)
+* **Ginny Zhu** - *Initial work* - [github profile](https://github.com/chocolocked)
 
 
 ## Acknowledgments
