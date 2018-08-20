@@ -1,9 +1,8 @@
 # Refinery Decoking Prediction
 
-
 The initial attempts at predicting decoking periods of refinery furnaces based on data (2017-11 to 2018-07) from process engineers.
 The goal is to help engineers take active control of possible imminent decoking and therefore help reduce the costs due to shut-down of the furnaces.
-
+***
 
 ## Prerequisites
 Models:
@@ -47,30 +46,33 @@ Generic:
 
 
 ## File Organizations
-* DecokingPrediction: Main folder with LSTM and GBM in 2 subfolders
- ** subfolders contain:
- ***
+* DecokingPrediction: Main folder with LSTM and GBM in 2 subfolders: LSM20passes & GBM20passes
+  1. code: python files 
+  2. data: data processed from imtermediate steps
+  3. demos: jupyter notebook with all content and corresponding converted html file
+  4. output: major output images 
+  5. search: tuning results
+  (6. model: saved model 
+   7. featureimportance: plots and partial dependence plots)
+* Data: raw data
+* StudyMaterials: project related readings
+* PresentationSlides: all touchdown slides
+* Experiments: previous explorations, including ones that were not adopted in the final models
+* README: this file
+
 
 ## To-dos
+* Apply in rest of the refineries
+* Make adjustments according to engieers' needs
+* UI
 
-Explain what these tests test and why
 
-```
-Give an example
-```
+## Acknowledgments
+* Special thanks to Deval for guidance along the way
+* To Bryce providing domain expertise, to Luis & Mario making this possible
+* And all rest people at Shell that make my intership extra wonderful
 
 
 ## Authors
 * **Ginny Zhu** - *Initial work* - [github profile](https://github.com/chocolocked)
-
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* Thank you all wonderful people at Shell that make my intership extra amazing
-* etc
-
-check out here(https://www.npmjs.com/package/convert-md) 
-
-**Coded by Ginny, with love :)**
+* **Coded by Ginny, with love :)**
