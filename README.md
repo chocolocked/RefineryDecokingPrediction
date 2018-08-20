@@ -69,8 +69,8 @@ Generic:
 
 ## Acknowledgments
 * Special thanks to Deval for guidance along the way
-* To Bryce providing domain expertise, to Luis & Mario making this possible
-* And all rest people at Shell that make my intership extra wonderful
+* To Bryce providing domain expertise, to Luis & Mario making the collaboration possible
+* And to all rest of people here that make my intership at Shell extra wonderful
 
 
 ## Authors
