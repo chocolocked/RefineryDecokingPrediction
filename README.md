@@ -1,43 +1,41 @@
 # Refinery Decoking Prediction
-Time Series Forecasting
 
-(blah blah blah) 
-Main things it does here;
+The initial attempts at predicting decoking periods of refinery furnaces based on data (2017-11 to 2018-07) from process engineers.
+The goal is to help engineers take active control of possible imminent decoking and therefore help reduce the costs due to shut-down of the furnaces.
 
-
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ## Prerequisites
+Models:
+* [scikit-learn]
+* [keras]
+* [tensorflow]
 
-OCR:
-[Tesseract-OCR]: Installation could be found here. 
-[pytesseract]
-[PIL]
+Plots:
+* [seaborn]
+* [matplotlib]
+* [plotly]
+* [pdpbox]
 
-PDf & Text processing:
-[tabula]
-[PyPDF2]
-[shutil]
-[fuzzywuzzy]
-[re]
-[cv2]
+Tuning:
+* [sigopt]
 
 Generic: 
-[Numpy]
-[pandas]
-[csv]
-[json]
-[timeit]
+* [Numpy]
+* [pandas]
+* [datetime]
+* [simplejson]
+* [csv]
+* [pickle]
+* [math]
 
-
-
-__
-```
-Give examples
-```
 
 ## How it works
+
+* The idea, simply, is to predict VPR(venturi pressure) for 20 passes of the furnaces. If any of them is over 0.95, then it indicates decoking needs. 
+* We are utilizing two approaches: Long short term memory(LSTM) and Gradient boosting (GBM) for the prediction.
+* The raw data: time stamped data of lots of variables stored in XOP, ndP, VPR, Flow, Temperature, Decoke, FireboxandDMDS, Analyzers, Severity sheets in the excel file
+ ![refineryrawdata](C:/Users/Ginny.Zhu/OneDrive - Shell/AArefinary/Pics/refineryrawdata.png)
+
 
 
 slight changes in terms of output locations after re-organization 
@@ -77,9 +75,7 @@ Give an example
 
 ## Authors
 
-* **Ginny Zhu** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Ginny Zhu** - *Initial work* - [githubprofile](https://github.com/chocolocked)
 
 
 ## Acknowledgments
